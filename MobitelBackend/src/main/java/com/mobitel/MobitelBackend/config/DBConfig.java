@@ -14,12 +14,8 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.mobitel.MobitelBackend.dao.CategoryDAO;
-import com.mobitel.MobitelBackend.dao.SupplierDAO; //added for supplier
-import com.mobitel.MobitelBackend.dao.ProductDAO;  //added for product
-import com.mobitel.MobitelBackend.model.Category;
-import com.mobitel.MobitelBackend.model.Supplier; //added for supplier
-import com.mobitel.MobitelBackend.model.Product;  //added for product
+import com.mobitel.MobitelBackend.dao.*;       //added for all
+import com.mobitel.MobitelBackend.model.*;        //added for all
 
 @Configuration
 @ComponentScan("com.mobitel.MobitelBackend")
@@ -57,6 +53,7 @@ public class DBConfig {
 		sessionBuilder.addAnnotatedClass(Category.class);
 		sessionBuilder.addAnnotatedClass(Supplier.class); // new added for supplier
 		sessionBuilder.addAnnotatedClass(Product.class);  // new added for product
+		sessionBuilder.addAnnotatedClass(User.class);  // new added for user
 		System.out.println("Session Factory Object Creation");
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
 		System.out.println("Session Factory Object Created");
@@ -95,5 +92,13 @@ public class DBConfig {
 	{
 		System.out.println("-- ProductDAO Object Creation--");
 		return new ProductDAO(sessionFactory);
+	}
+	
+	@Autowired
+	@Bean(name="userDAO")
+	public UserDAO getUserDAO(SessionFactory sessionFactory)
+	{
+		System.out.println("-- UserDAO Object Creation--");
+		return new UserDAO(sessionFactory);
 	}
 }
