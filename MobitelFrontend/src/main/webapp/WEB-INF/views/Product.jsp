@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ include file="Header.jsp" %>
 <html>
 <head>
 <title>Product Page</title></head>
 <body>
-
+     </br>
+     </br>
+     </br>
    	 <form:form action="${pageContext.request.contextPath}/InsertProduct" modelAttribute="product" method="POST" enctype="multipart/form-data"> 
    	 <table align="center">
 			<tr>

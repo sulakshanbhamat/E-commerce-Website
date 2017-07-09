@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="Header.jsp" %>
 
-
-
+</br>
+</br>
+</br>
+</br>
 <!-- Category Form Started -->
 <c:if test="${flag}">
 	<form action="../UpdateCategory" method="post">
