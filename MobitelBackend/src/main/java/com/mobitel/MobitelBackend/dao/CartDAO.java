@@ -46,5 +46,16 @@ public class CartDAO {
 		sessionFactory.getCurrentSession().delete(cart);
 	}
 	
+	public Cart getCartItem(int citemid)
+	{
+		Session session=sessionFactory.openSession();
+		Cart cart=(Cart)session.get(Cart.class,citemid);
+		return cart;
+	}
 	
+	@Transactional
+	public void updateCartItem(Cart cart)
+	{
+		sessionFactory.getCurrentSession().update(cart);
+	}
 }

@@ -14,9 +14,15 @@ import javax.persistence.Table;
 		int citemid;
 		
 		int cartid,prodid,quantity,price;
-		String userid,prodname,status;
+		String username,prodname,status;
 		
 		
+		public String getUsername() {
+			return username;
+		}
+		public void setUsername(String username) {
+			this.username = username;
+		}
 		public int getCitemid() {
 			return citemid;
 		}
@@ -46,12 +52,6 @@ import javax.persistence.Table;
 		}
 		public void setPrice(int price) {
 			this.price = price;
-		}
-		public String getUserid() {
-			return userid;
-		}
-		public void setUserid(String userid) {
-			this.userid = userid;
 		}
 		public String getProdname() {
 			return prodname;
