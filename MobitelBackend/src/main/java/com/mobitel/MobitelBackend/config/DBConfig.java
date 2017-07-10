@@ -54,6 +54,7 @@ public class DBConfig {
 		sessionBuilder.addAnnotatedClass(Supplier.class); // new added for supplier
 		sessionBuilder.addAnnotatedClass(Product.class);  // new added for product
 		sessionBuilder.addAnnotatedClass(User.class);  // new added for user
+		sessionBuilder.addAnnotatedClass(Cart.class);  // new added for cart
 		System.out.println("Session Factory Object Creation");
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
 		System.out.println("Session Factory Object Created");
@@ -100,5 +101,13 @@ public class DBConfig {
 	{
 		System.out.println("-- UserDAO Object Creation--");
 		return new UserDAO(sessionFactory);
+	}
+	
+	@Autowired
+	@Bean(name="cartDAO")
+	public CartDAO getCartDAO(SessionFactory sessionFactory)
+	{
+		System.out.println("-- CartDAO Object Creation--");
+		return new CartDAO(sessionFactory);
 	}
 }
