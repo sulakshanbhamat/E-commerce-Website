@@ -11,4 +11,10 @@ public class PageController {
 	{
 		return "AboutUs";
 	}
+	
+	@RequestMapping("/login")
+	public String showLoginPage()
+	{
+		return "Login";
+	}
 }
