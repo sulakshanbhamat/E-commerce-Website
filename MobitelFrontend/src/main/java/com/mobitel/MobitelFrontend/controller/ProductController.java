@@ -119,4 +119,33 @@ public class ProductController
 		}
 		return catlist;
 	}
+	// added to display the product with image
+	@RequestMapping(value="/displayProduct")
+	public String displayProduct(Model m)
+	{
+		List<Product> prodlist=productDAO.getProductDetails();
+		m.addAttribute("prodlist",prodlist);
+		return "UserHome"; //wrote productdesc instead of ProductPage
+	}
+
+	
+	@RequestMapping(value="/ProdDesc/{prodid}")
+	public String showProductDesc(@PathVariable("prodid") int prodid, Model m)
+	{
+		
+		return "ProductDesc";
+	}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 }

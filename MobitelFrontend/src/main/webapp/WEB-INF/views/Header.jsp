@@ -35,6 +35,7 @@
         <li><a href="#">Page-3</a></li>
        </ul>
       </li>
+      <li><a href="displayProduct">Display Product</a></li>
       <li><a href="#">Contact Us</a></li>
       <li><a href="login">Login</a></li>
     </ul>
