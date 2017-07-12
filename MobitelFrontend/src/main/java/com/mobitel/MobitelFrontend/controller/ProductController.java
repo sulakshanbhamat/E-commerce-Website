@@ -49,7 +49,7 @@ public class ProductController
 		
 		/* started multipath image adding */
 		System.out.println("---Images Storing Started -------");
-		String path="E:\\Dev-ops\\MobitelFrontend\\src\\main\\webapp\\resources\\images\\";
+		String path="E:\\Repository\\MobitelFrontend\\src\\main\\webapp\\resources\\images\\";
 		String fileinfo=path+product.getProdid()+".jpg";
 		File f=new File(fileinfo);
 		
@@ -64,7 +64,8 @@ public class ProductController
 			}
 			catch(Exception e)
 			{
-				System.out.println("Exception Arised");
+				System.out.println("Exception Arised " );
+				e.printStackTrace();
 			}
 		}
 		else
@@ -132,7 +133,14 @@ public class ProductController
 	@RequestMapping(value="/ProdDesc/{prodid}")
 	public String showProductDesc(@PathVariable("prodid") int prodid, Model m)
 	{
+		System.out.println("Cart product with id : "+prodid);
+		Product product=productDAO.getProduct(prodid);
+		m.addAttribute("product",product);
+		System.out.println("product : "+product);
+		m.addAttribute("catlist",this.getCatList());
+		List<Product> prodlist=productDAO.getProductDetails();
 		
+		m.addAttribute("prodlist",prodlist);
 		return "ProductDesc";
 	}
 			

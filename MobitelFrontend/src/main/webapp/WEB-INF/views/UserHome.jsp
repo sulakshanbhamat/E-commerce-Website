@@ -23,7 +23,7 @@
        <div class="caption">
          <h4>${product.prodname}</h4>
          <p>${product.price}</p>
-         
+         <td><a href="<c:url value="ProdDesc/${product.prodid}"/>">ADD TO CART</a>  </td>
        </div>
       </c:forEach>
      </div>

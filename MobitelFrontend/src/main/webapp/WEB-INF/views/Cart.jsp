@@ -38,7 +38,7 @@
 </tr>
  </c:forEach>
  <tr>
-   <td><a href="ProductPage">Continue Shopping</a></td>
+   <td><a href="UserHome">Continue Shopping</a></td>
    <td><a href="Checkout">CheckOut</a></td>
  </tr>
  

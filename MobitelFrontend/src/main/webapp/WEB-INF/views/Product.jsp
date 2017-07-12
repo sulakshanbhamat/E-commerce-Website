@@ -78,5 +78,8 @@
 		</c:forEach>
 	</table>
 	<!-- Completed Displaying Table -->
+	<br>
+	<br>
+	<br>
 </body>
 </html>
