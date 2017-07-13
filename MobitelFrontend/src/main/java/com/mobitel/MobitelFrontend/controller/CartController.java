@@ -78,8 +78,8 @@ public class CartController {
 		
 		return "Cart";
 	}
-	/*
-	@RequestMapping(value="/updateCartItem/{citemid}")
+	
+	@RequestMapping(value="/deleteCartItem/{citemid}")
 	public String deleteCartItem(@PathVariable("citemid") int citemid, HttpSession session,Model m)
 	{
 		Cart cart=cartDAO.getCartItem(citemid);
@@ -92,5 +92,5 @@ public class CartController {
 		
 		return "Cart";
 	}
-	*/
+	
 }

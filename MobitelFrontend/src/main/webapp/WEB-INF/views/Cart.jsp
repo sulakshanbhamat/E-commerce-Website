@@ -27,14 +27,14 @@
  <c:forEach items="${cartitems}" var="cartitem">
 
  <tr>
-  <form method="get" ${pageContext.request.contextPath}/updateCartItem/${cartitem.citemid}">
+  <form method="get" value="${pageContext.request.contextPath}/updateCartItem/${cartitem.citemid}">
  	<td>${cartitem.prodname}</td>
     <td><input type="text" name="quantity" value="${cartitem.quantity}"/></td>
     <td>${cartitem.price * cartitem.quantity}</td>
     <td><img src="<c:url value="/resources/images/${cartitem.prodid}.jpg"/>" width="100"></td>
     <td>
      <input type="submit" value="UPDATE" class="btn-success btn-block">
-    <a href="<c:url value="${pageContext.request.contextPath}/deleteCartItem/${cartitem.citemid}"/>">Delete</a>
+    <a href="${pageContext.request.contextPath}/deleteCartItem/${cartitem.citemid}"> Delete</a>
     <!--   <input type="submit" value="DELETE" class=""/> -->
    </td>  
   </form>
