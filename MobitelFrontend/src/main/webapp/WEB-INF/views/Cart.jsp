@@ -12,7 +12,6 @@
 <br>
 <br>
 <br>
-
 <table cellspacing="3" align="center">
  <tr>
    <td colspan="5"><center><h3>Shopping Cart</h3></center></td>
@@ -26,15 +25,19 @@
  </tr>
  
  <c:forEach items="${cartitems}" var="cartitem">
+
  <tr>
-    <td>${cartitem.prodname}</td>
-    <td><input type="text" value="${cartitem.quantity}"/></td>
+  <form method="get" ${pageContext.request.contextPath}/updateCartItem/${cartitem.citemid}">
+ 	<td>${cartitem.prodname}</td>
+    <td><input type="text" name="quantity" value="${cartitem.quantity}"/></td>
     <td>${cartitem.price * cartitem.quantity}</td>
-    <td><img src="<c:url value="/resources/images/${cartitem.prodid}.jpg"/>"></td>
+    <td><img src="<c:url value="/resources/images/${cartitem.prodid}.jpg"/>" width="100"></td>
     <td>
      <input type="submit" value="UPDATE" class="btn-success btn-block">
-     <input type="submit" value="DELETE" class=""/>
+    <a href="<c:url value="${pageContext.request.contextPath}/deleteCartItem/${cartitem.citemid}"/>">Delete</a>
+    <!--   <input type="submit" value="DELETE" class=""/> -->
    </td>  
+  </form>
 </tr>
  </c:forEach>
  <tr>
@@ -43,5 +46,6 @@
  </tr>
  
 </table>
+
 </body>
 </html>
