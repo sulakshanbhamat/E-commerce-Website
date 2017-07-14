@@ -22,5 +22,10 @@ public class PageController {
 	{
 		return "UserHome";
 	}
-	
+	@RequestMapping("/Home")
+	public String showHomePage()
+	{
+		return "Home";
+	}
+		
 }

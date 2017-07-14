@@ -20,12 +20,12 @@
        <span class="icon-bar"></span>      
      </button>
 
-       <a href="#" class="navbar-brand">Mobitel</a>
+       <a href="Home" class="navbar-brand">Mobitel</a>
     </div>
      <div class="navbar-collapse collapse" id="ib-example-navbar">
       
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="index">Home</a></li>
+      <li class="active"><a href="Home">Home</a></li>
       <li class="">
       <li><a href="#">About Us</a></li>
       <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Product<span class="caret"></span></a>
