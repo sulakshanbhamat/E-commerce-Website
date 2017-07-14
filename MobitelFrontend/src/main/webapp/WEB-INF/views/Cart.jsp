@@ -28,14 +28,20 @@
 
  <tr>
   <form method="get" value="${pageContext.request.contextPath}/updateCartItem/${cartitem.citemid}">
+ 	
+ 	<input type="hidden" name="citemid" value="${cartitem.citemid}">
  	<td>${cartitem.prodname}</td>
     <td><input type="text" name="quantity" value="${cartitem.quantity}"/></td>
     <td>${cartitem.price * cartitem.quantity}</td>
     <td><img src="<c:url value="/resources/images/${cartitem.prodid}.jpg"/>" width="100"></td>
     <td>
-     <input type="submit" value="UPDATE" class="btn-success btn-block">
-    <a href="${pageContext.request.contextPath}/deleteCartItem/${cartitem.citemid}"> Delete</a>
-    <!--   <input type="submit" value="DELETE" class=""/> -->
+ 
+      <input type="hidden" name="citemid" value="${cartitem.citemid}">
+
+      <input type="submit" value="UPDATE" class="btn-success btn-block">
+  
+     <a href="${pageContext.request.contextPath}/deleteCartItem/${cartitem.citemid}"> Delete</a>
+   
    </td>  
   </form>
 </tr>

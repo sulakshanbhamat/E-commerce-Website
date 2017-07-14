@@ -89,19 +89,19 @@ public class SupplierController {
 	}
 	
 	@RequestMapping(value="/UpdateSupplier",method=RequestMethod.POST)
-	public String updateSupplier(@RequestParam("catid") int catid,@RequestParam("catname") String catname,@RequestParam("catdesc") String catdesc,Model m)
+	public String updateSupplier(@RequestParam("suppid") int suppid,@RequestParam("suppname") String suppname,@RequestParam("address") String address,Model m)
 	{
 		System.out.println("--Updating the Supplier----");
 
-		Supplier category=new Supplier();
-		category.setCatid(catid);
-		category.setCatname(catname);
-		category.setCatdesc(catdesc);
+		Supplier supplier=new Supplier();
+		supplier.setSuppid(suppid);
+		supplier.setSuppname(suppname);
+		supplier.setAddress(address);
 		
-		categoryDAO.insertUpdateSupplier(category);
+		supplierDAO.insertUpdateSupplier(supplier);
 		
-		List<Supplier> list=categoryDAO.getSupplierDetails();
-		m.addAttribute("catdetail",list);
+		List<Supplier> list=supplierDAO.getSupplierDetails();
+		m.addAttribute("suppdetail",list);
 		
 		boolean flag=false;
 		m.addAttribute("flag",flag);

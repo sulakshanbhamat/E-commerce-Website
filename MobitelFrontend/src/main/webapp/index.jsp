@@ -8,6 +8,7 @@
 <center>
 <a href="Category">Category</a>
 <a href="Product">Product</a>
+<a href="Supplier">Supplier</a>
 </center>
 </body>
 </html>
