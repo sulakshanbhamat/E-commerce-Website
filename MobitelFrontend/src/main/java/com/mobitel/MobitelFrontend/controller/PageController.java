@@ -17,4 +17,10 @@ public class PageController {
 	{
 		return "Login";
 	}
+	@RequestMapping("/UserHome")
+	public String showUserHomePage()
+	{
+		return "UserHome";
+	}
+	
 }

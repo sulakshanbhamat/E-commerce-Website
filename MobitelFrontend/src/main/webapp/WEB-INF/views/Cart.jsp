@@ -47,8 +47,8 @@
 </tr>
  </c:forEach>
  <tr>
-   <td><a href="UserHome">Continue Shopping</a></td>
-   <td><a href="Checkout">CheckOut</a></td>
+   <td><a href="<c:url value="../displayProduct"/>">Continue Shopping</a></td>
+   <td><a href="<c:url value="/checkout"/>">CheckOut</a></td>
  </tr>
  
 </table>

@@ -24,13 +24,13 @@ public class UserTestCase {
 		
 		User user=new User();
 		
-		user.setUsername("knefn");
-		user.setPassword("fknf");
-		user.setCustname("mfoefm");
+		user.setUsername("ram");
+		user.setPassword("ram");
+		user.setCustname("Bhagwan");
 		user.setRole("Guest");
-		user.setEmail("ef f f@gmail.com");
+		user.setEmail("ram@gmail.com");
 		user.setEnabled(true);
-		user.setCustaddress("dcdjcnkjdc");
+		user.setCustaddress("In clouds");
 
 		userDAO.insertUpdateUser(user);		
 		System.out.println("Username Inserted");
