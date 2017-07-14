@@ -30,9 +30,9 @@
       <li><a href="#">About Us</a></li>
       <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Product<span class="caret"></span></a>
        <ul class="dropdown-menu"> 
-        <li><a href="#">Page-1</a></li>
-        <li><a href="#">Page-2</a></li>
-        <li><a href="#">Page-3</a></li>
+        <li><a href="OnePlus">One Plus</a></li>
+        <li><a href="#">iphone</a></li>
+        <li><a href="#">Xiaomi</a></li>
        </ul>
       </li>
       <li><a href="displayProduct">Display Product</a></li>

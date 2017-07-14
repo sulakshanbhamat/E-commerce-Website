@@ -27,5 +27,9 @@ public class PageController {
 	{
 		return "Home";
 	}
-		
+	@RequestMapping("/OnePlus")
+	public String showOnePlusPage()
+	{
+		return "OnePlus";
+	}		
 }
