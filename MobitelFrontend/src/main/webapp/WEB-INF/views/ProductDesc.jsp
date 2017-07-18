@@ -40,6 +40,7 @@
       <input type="submit" value="AddToCart" class="btn btn-xs btn-success btn-block"/>
       </form>
       </td>
-   </tr> 
+   </tr>
+   </table> 
 </body>
 </html>
