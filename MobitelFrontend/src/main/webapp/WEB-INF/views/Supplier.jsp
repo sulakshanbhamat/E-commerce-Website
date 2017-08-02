@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ include file="Header.jsp" %>
+<%@ include file="AdminHeader.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,19 +32,19 @@
 		<tr>
 			<td>Supplier Name</td>
 			<c:if test="${flag}">
-				<td><input type="text" name="suppname" value="${supplier.suppname}" /></td>
+				<td><input type="text" name="suppname" value="${supplier.suppname}" required/></td>
 			</c:if>
 			<c:if test="${!flag}">
-				<td><input type="text" name="suppname" /></td>
+				<td><input type="text" name="suppname" required/></td>
 			</c:if>
 		</tr>
 		<tr>
 			<td>Supplier Address</td>
 			<c:if test="${flag}">
-				<td><input type="text" name="address" value="${supplier.address}" /></td>
+				<td><input type="text" name="address" value="${supplier.address}" required/></td>
 			</c:if>
 			<c:if test="${!flag}">
-			<td><input type="text" name="address" /></td>
+			<td><input type="text" name="address" required/></td>
 			</c:if>
 		</tr>
 		<tr>
@@ -55,6 +55,8 @@
 	</table>
 </form>
 <!-- Category Form Completed -->
+
+<br>
 
 <!-- Displaying the Category data using Table -->
 <table cellspacing="2" align="center" border="1">
@@ -77,6 +79,9 @@
 	</c:forEach>
 </table>
 <!-- Completed Displaying Table -->
-
+<br>
+<br>
+<br>
 </body>
 </html>
+<%@ include file="Footer.jsp" %>

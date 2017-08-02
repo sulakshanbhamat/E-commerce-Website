@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ include file="Header.jsp" %>
+<%@ include file="AdminHeader.jsp" %>
 <html>
 <head>
 <title>Product Page</title></head>
@@ -17,6 +17,7 @@
 			<tr>
 				<td>Product Name</td>
 				<td><form:input path="prodname" /></td>
+				<td><form:errors path="prodname" cssStyle="color: #ff0000;"/></td>
 			</tr>
 			<tr>
 				<td>Category</td>
@@ -28,18 +29,22 @@
 			<tr>
 				<td>Supplier</td>
 				  <td><form:input path="suppid" /></td>
+				  <td><form:errors path="suppid" cssStyle="color: #ff0000;"/></td>
 			</tr>
 			<tr>
 				<td>Price</td>
 				  <td><form:input path="price" /></td>
+				  <td><form:errors path="price" cssStyle="color: #ff0000;"/></td>
 			</tr>
 			<tr>
 				<td>Stock</td>
 				  <td><form:input path="quantity" /></td>
+				  <td><form:errors path="quantity" cssStyle="color: #ff0000;"/></td>
 			</tr>
 			<tr>
 				<td>Product Desc</td>
 				 <td><form:textarea path="prodDesc" /></td>
+				 <td><form:errors path="prodDesc" cssStyle="color: #ff0000;"/></td>
 			</tr>
 			<tr>
 			     <td>Product Image</td>
@@ -51,7 +56,7 @@
 		</table>
 		<form:hidden path="prodid"/>
 	</form:form>
-
+<br>
 	<!-- Displaying the Product data using Table -->
 	<table cellspacing="2" align="center" border="1">
 		<tr bgcolor="pink">
@@ -83,3 +88,4 @@
 	<br>
 </body>
 </html>
+<%@ include file="Footer.jsp" %>

@@ -20,24 +20,16 @@
        <span class="icon-bar"></span>      
      </button>
 
-       <a href="Home" class="navbar-brand">Mobitel</a>
+       <a href="AdminHome" class="navbar-brand">Mobitel</a>
     </div>
      <div class="navbar-collapse collapse" id="ib-example-navbar">
       
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="Home">Home</a></li>
-      <li class="">
-      <li><a href="About-us">About Us</a></li>
-      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Product<span class="caret"></span></a>
-       <ul class="dropdown-menu"> 
-        <li><a href="OnePlus">One Plus</a></li>
-        <li><a href="#">iphone</a></li>
-        <li><a href="#">Xiaomi</a></li>
-       </ul>
-      </li>
-      <li><a href="displayProduct">Display Product</a></li>
-      <li><a href="ContactUs">Contact Us</a></li>
-      <li><a href="login">Login</a></li>
+
+      <li><a href="Category">Category</a></li>
+      <li><a href="Product">Product</a></li>
+      <li><a href="Supplier">Supplier</a></li>
+      <li><a href="login">Logout</a></li>
     </ul>
      </div>
   </div>

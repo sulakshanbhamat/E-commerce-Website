@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ include file="Header.jsp" %>
+<%@ include file="AdminHeader.jsp" %>
 
 </br>
 </br>
@@ -18,25 +18,25 @@
 		<tr>
 			<td colspan="2">Category Details</td>
 			<c:if test="${flag}">
-			<input type="hidden" name="catid" value="${category.catid}"/>
+			<input type="hidden" name="catid" value="${category.catid}" required/>
 			</c:if>
 		</tr>
 		<tr>
 			<td>Category Name</td>
 			<c:if test="${flag}">
-				<td><input type="text" name="catname" value="${category.catname}" /></td>
+				<td><input type="text" name="catname" value="${category.catname}" required/></td>
 			</c:if>
 			<c:if test="${!flag}">
-				<td><input type="text" name="catname" /></td>
+				<td><input type="text" name="catname" required/></td>
 			</c:if>
 		</tr>
 		<tr>
 			<td>Category Description</td>
 			<c:if test="${flag}">
-				<td><input type="text" name="catdesc" value="${category.catdesc}" /></td>
+				<td><input type="text" name="catdesc" value="${category.catdesc}" required/></td>
 			</c:if>
 			<c:if test="${!flag}">
-			<td><input type="text" name="catdesc" /></td>
+			<td><input type="text" name="catdesc" required/></td>
 			</c:if>
 		</tr>
 		<tr>
@@ -47,7 +47,7 @@
 	</table>
 </form>
 <!-- Category Form Completed -->
-
+<br>
 <!-- Displaying the Category data using Table -->
 <table cellspacing="2" align="center" border="1">
 
@@ -69,6 +69,9 @@
 	</c:forEach>
 </table>
 <!-- Completed Displaying Table -->
-
+<br>
+<br>
+<br>
 </body>
 </html>
+<%@ include file="Footer.jsp" %>

@@ -6,10 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
 
-	@RequestMapping("/AboutUs")
+	@RequestMapping("/About-us")
 	public String showAboutUs()
 	{
-		return "AboutUs";
+		return "About-us";
+	}
+	@RequestMapping("/ContactUs")
+	public String showContactUs()
+	{
+		return "ContactUs";
+	}
+	@RequestMapping("/AdminHome")
+	public String showAdminHome()
+	{
+		return "AdminHome";
 	}
 	
 	@RequestMapping("/login")

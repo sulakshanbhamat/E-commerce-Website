@@ -9,3 +9,4 @@
  <h2 align="center">About Us Page</h2>
 </body>
 </html>
+<%@ include file="Footer.jsp" %>
