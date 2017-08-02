@@ -9,6 +9,16 @@ import javax.persistence.Transient;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
+
+
 
 
     @Entity
@@ -19,9 +29,12 @@ import org.springframework.web.multipart.MultipartFile;
     	@GeneratedValue
     	int prodid;
     	
+   // 	@Size(min=5, max=10, message="Your name should be between 5 - 10 characters.")
     	String prodname;
+    	
     	int catid,suppid;
     	int quantity,price;
+    //	@Min(value=5, message="Please insert at least 5 characters")
     	String prodDesc;
     	
     	@Transient
